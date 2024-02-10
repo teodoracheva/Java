@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.Locale;
+public class TempConverterInput {
+    public static void main(String[] args) throws Exception {
+        Scanner s = new Scanner(System.in).useLocale(Locale.US) ;
+
+        System.out.print("What's the temperature in Fahrenheit?");
+
+        double fahrenheit = s.nextDouble();
+        System.out.printf("Temperature in Fahrenheit is: %.1f\n",fahrenheit);
+
+        double celsius;
+        celsius = ((fahrenheit - 32)* 5 ) / 9;
+        System.out.printf("Temperature in Celsius is: %.2f\n", celsius);
+    }
+}
