@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception{
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Year: ");
+        double year = s.nextDouble();
+
+        if (year <= 1900){
+            System.out.println("Before 20th century");
+        }else if (year >= 1901 && year <= 2000) {
+            System.out.println("During 20th century");
+        }else {
+             System.out.print("After 20th century");
+        }
+    }
+}
