@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class DiceRollSimulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Desired sum of two rolls: ");
+        int desiredSum = scanner.nextInt();
+
+        Random random = new Random();
+
+        int firstRoll = random.nextInt(6) + 1;
+        int secondRoll = random.nextInt(6) + 1;
+        int sum = firstRoll + secondRoll;
+
+        System.out.printf("First roll was %d, second roll was %d, the sum is %d%n", firstRoll, secondRoll, sum);
+
+        boolean win = (sum == desiredSum);
+        System.out.println("Win: " + win);
+    }
+}
