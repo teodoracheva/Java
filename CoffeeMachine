@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Amount: ");
+        double amount = s.nextDouble();
+
+        System.out.println("1. short espresso\t0.50\n2. long espresso\t0.60\n3." +
+                "cappuccino\t\t0.85\n4. coffee with milk\t0.90\n5. caffeinefree\t0.60\n");
+        System.out.print("Your choice: ");
+        int result = s.nextInt();
+
+        if(result < 1 || result > 5){
+            System.out.println("Please select from the menu");
+            return;
+        }else{
+
+            switch (result){
+                case 1:
+                    if(amount < 0.50){
+                        System.out.println("Not enough money");
+                    }else if(amount == 0.50){
+                        System.out.println("Preparing your drink...");
+                    }else if(amount > 0.50){
+                    System.out.println("Preparing your drink...");
+                    double change = amount - 0.50;
+                    System.out.printf("Change: %.2f ", change);
+                    }
+                    return;
+
+                case 2:
+                    if(amount < 0.60){
+                        System.out.println("Not enough money");
+                    }else if(amount == 0.60){
+                        System.out.println("Preparing your drink...");
+                    }else if(amount > 0.60){
+                        System.out.println("Preparing your drink...");
+                        double change = amount - 0.60;
+                        System.out.printf("Change: %.2f", change);
+                    }
+                    return;
+
+                case 3:
+                    if(amount < 0.85){
+                        System.out.println("Not enough money");
+                    }else if(amount == 0.85){
+                        System.out.println("Preparing your drink...");
+                    }else if(amount > 0.85){
+                        System.out.println("Preparing your drink...");
+                        double change = amount - 0.85;
+                        System.out.printf("Change: %.2f", change);
+                    }
+                    return;
+
+                case 4:
+                    if(amount < 0.90){
+                        System.out.println("Not enough money");
+                    }else if(amount == 0.90){
+                        System.out.println("Preparing your drink...");
+                    }else if(amount > 0.90){
+                        System.out.println("Preparing your drink...");
+                        double change = amount - 0.90;
+                        System.out.printf("Change: %.2f", change);
+                    }
+                    return;
+
+                case 5:
+                    if(amount < 0.60){
+                        System.out.println("Not enough money");
+                    }else if(amount == 0.60){
+                        System.out.println("Preparing your drink...");
+                    }else if(amount > 0.60){
+                        System.out.println("Preparing your drink...");
+                        double change = amount - 0.60;
+                        System.out.printf("Change: %.2f", change);
+                    }
+                    break;
+            }
+        }
+
+    }
+}
