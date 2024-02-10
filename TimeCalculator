@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class TimeConverter {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("How many seconds? ");
+        double totalSeconds = s.nextDouble();
+
+        double secondsInMinute = 60;
+        double secondsInHour = 3600;
+        double secondsInDay = 86400;
+        double secondsInWeek = 604800;
+        double secondsInYear = 31536000;
+
+        double minutes = totalSeconds / secondsInMinute;
+        double hours = totalSeconds / secondsInHour;
+        double days = totalSeconds / secondsInDay;
+        double weeks = totalSeconds / secondsInWeek;
+        double years = totalSeconds / secondsInYear;
+
+        System.out.println("Minutes: " + minutes);
+        System.out.println("Hours: " + hours);
+        System.out.println("Days: " + days);
+        System.out.println("Weeks: " + weeks);
+        System.out.println("Years: " + years);
+
+    }
+}
